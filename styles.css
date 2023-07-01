@@ -8,15 +8,16 @@
 }
 
 @font-face {
-    font-family: "my-font";
+    font-family: "my-font1";
     src: url("./font/TTNormsPro-Regular.woff2");
 }
 
 body {
-    font-family: 'my-font', Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'my-font1', Verdana, Geneva, Tahoma, sans-serif;
     margin: 0;
     background: var(--black-trp);
 }
+
 
 li {
     list-style: none;
@@ -146,6 +147,7 @@ h1 {
     padding-left: 1rem;
     opacity: 0;
     transform: translateX(-100px);
+    max-width: 400px;
 }
 
 .hero_text_wrapper.slide_in {
@@ -260,7 +262,7 @@ h1 {
     border-radius: 0.8rem;
     font-weight: 500;
     display: inline-block;
-    background: #334155;
+    background: #27272a;
 }
 
 footer {
@@ -282,11 +284,20 @@ footer div:nth-child(1) ul {
     display: flex;
     gap: 1rem;
     font-size: 0.9rem;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social_media_links ul {
+    flex-direction: row !important;
+    justify-content: center;
+    gap: 2rem !important;
 }
 
 .footer_link_logo {
-    display: inline-block;
+    display: flex;
     margin-bottom: 0.5rem;
+    justify-content: center;
 }
 
 .footer_nav_link {
@@ -303,11 +314,76 @@ footer div:nth-child(1) ul {
     border-top: 1px solid #737373;
     border-bottom: 1px solid #737373;
     padding: 2rem 0;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
 }
 
 .copyright p:nth-child(2) {
     color: #d6d3d1;
     margin-top: 2.1rem;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
+}
+
+@media screen and (min-width:800px) {
+    .hidden {
+        display: block;
+    }
+
+    .hide_menu_wrapper {
+        display: none;
+    }
+
+    .nav_list {
+        display: flex;
+        margin: 0;
+        align-items: center;
+        padding: 0;
+        gap: 3rem;
+    }
+
+    .nav_list li {
+        margin: 0;
+    }
+
+    .nav_list a {
+        color: var(--white);
+    }
+
+    .menu_button {
+        display: none;
+    }
+
+    .details_section div {
+        display: flex;
+        align-items: center;
+    }
+
+    .details_section div:nth-child(2) {
+        flex-direction: row-reverse !important;
+    }
+
+    .transparent_2 h2 {
+        max-width: 400px;
+    }
+
+    footer div:nth-child(1) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .footer_nav_link ul {
+        flex-direction: row !important;
+    }
+
+    .footer_link_logo {
+        margin: 0;
+    }
+
+    .footer_nav_link {
+        margin: 0;
+    }
+
+    footer ul {
+        margin: 0;
+    }
 }
